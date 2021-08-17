@@ -1,6 +1,7 @@
 package com.example.gmtest;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements TrackAdapter.Call
 
     EditText searchBar;
     Button searchButton;
+
     RecyclerView recyclerView;
     TrackAdapter trackAdapter;
 
@@ -21,6 +23,13 @@ public class MainActivity extends AppCompatActivity implements TrackAdapter.Call
 
         searchBar = (EditText) findViewById(R.id.editTextArtist);
         searchButton = (Button) findViewById(R.id.enterArtistButton);
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
