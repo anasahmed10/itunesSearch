@@ -1,4 +1,4 @@
-package com.example.gmtest;
+package com.example.gmtest.presenter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gmtest.R;
 import com.example.gmtest.model.Track;
 
 import java.util.List;
@@ -90,24 +91,21 @@ public class TrackAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     public class Viewholder extends BaseViewHolder {
 
-        @BindView(R.id.trackTitle)
-        TextView trackNameView;
+        // ButterKnife API to bind results to TextView
 
-        @BindView(R.id.trackPrice)
-        TextView trackPriceView;
+        @BindView(R.id.trackTitle) TextView trackNameView;
 
-        @BindView(R.id.trackArtist)
-        TextView artistNameView;
+        @BindView(R.id.trackPrice) TextView trackPriceView;
 
-        @BindView(R.id.trackGenreName)
-        TextView genreNameView;
+        @BindView(R.id.trackArtist) TextView artistNameView;
 
-        @BindView(R.id.trackReleaseDate)
-        TextView releaseDateView;
+        @BindView(R.id.trackGenreName) TextView genreNameView;
+
+        @BindView(R.id.trackReleaseDate) TextView releaseDateView;
 
         public Viewholder(View itemView) {
             super(itemView);
-            ButterKnife.bind(itemView);
+            ButterKnife.bind(this, itemView);
         }
 
 
@@ -119,6 +117,7 @@ public class TrackAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             releaseDateView.setText("");
         }
 
+        // Maps the values to the view based on position
         @Override
         public void onBind(int position) {
             super.onBind(position);

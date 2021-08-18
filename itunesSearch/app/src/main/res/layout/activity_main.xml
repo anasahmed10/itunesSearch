@@ -4,11 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-
-
-
-    >
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/editTextArtist"
@@ -16,28 +12,40 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="33dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="47dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/artist_name" />
+        android:hint="@string/artist_name"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/enterArtistButton"
-        android:layout_width="112dp"
+        android:layout_width="127dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="30dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="28dp"
         android:layout_toEndOf="@+id/editTextArtist"
         android:text="@string/search" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyle"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="298dp"
+        android:layout_marginEnd="136dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="619dp"
         android:layout_below="@+id/editTextArtist"
-        android:layout_marginTop="19dp" />
+        android:layout_marginTop="18dp" />
 </RelativeLayout>

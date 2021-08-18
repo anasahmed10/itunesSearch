@@ -7,7 +7,7 @@ public class ServiceFactory {
 
     public static APIService getInstance() {
 
-        String baseUrl = "https://itunes.apple.com/search?term=";
+        String baseUrl = "https://itunes.apple.com/";
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)

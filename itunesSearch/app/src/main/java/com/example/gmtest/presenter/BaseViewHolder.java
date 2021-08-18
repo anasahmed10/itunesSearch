@@ -1,7 +1,8 @@
-package com.example.gmtest;
+package com.example.gmtest.presenter;
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 
+// Base class to be used by TrackAdapter
 public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
 
     private int mCurrentPosition;

@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+// Model class that the Presenter will use
 public class TrackModel {
     @SerializedName("resultCount")
     @Expose
@@ -27,4 +28,6 @@ public class TrackModel {
     public void setTracks(List<Track> tracks) {
         this.tracks = tracks;
     }
+
+
 }

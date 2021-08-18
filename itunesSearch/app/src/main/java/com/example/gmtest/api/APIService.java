@@ -10,7 +10,7 @@ import retrofit2.http.Query;
 
 public interface APIService {
 
-    @GET("search")
+    @GET("search?term=")
     @Headers("Content-Type: application/x-www-form-urlencoded")
     Call<TrackModel> getTracks(@Query("term") String term);
 }

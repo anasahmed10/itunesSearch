@@ -3,6 +3,7 @@ package com.example.gmtest.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+// Base Class containing track information
 public class Track {
 
     @SerializedName("artistName")
@@ -24,6 +25,14 @@ public class Track {
     @SerializedName("primaryGenreName")
     @Expose
     private final String primaryGenreName;
+
+    public Track() {
+        artistName = "";
+        trackName = "";
+        trackPrice = "";
+        releaseDate = "";
+        primaryGenreName = "";
+    }
 
     Track(String martistName, String mtrackName, String mtrackPrice, String mreleaseDate, String mprimaryGenreName) {
         artistName = martistName;
