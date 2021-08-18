@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/itunesSearch.iml" filepath="$PROJECT_DIR$/.idea/itunesSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/itunesSearch.iml" filepath="$PROJECT_DIR$/.idea/modules/itunesSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/itunesSearch.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/itunesSearch.app.iml" />
     </modules>
   </component>
 </project>
