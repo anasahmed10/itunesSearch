@@ -41,6 +41,7 @@ public class ApplicationUnitTest {
         try {
             APIService apiService = ServiceFactory.getInstance(wrongURL);
             Call<TrackModel> trackModelCall = apiService.getTracks(sampleSearch);
+            assertFalse(true);
 
         } catch (Exception e) {
             e.printStackTrace();
