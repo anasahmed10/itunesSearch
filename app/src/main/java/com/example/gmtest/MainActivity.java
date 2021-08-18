@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements TrackAdapter.Call
     @Override
     protected void onStart() {
         super.onStart();
+        progressBar.setVisibility(View.INVISIBLE);
     }
 
     @Override

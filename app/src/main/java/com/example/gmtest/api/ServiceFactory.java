@@ -16,4 +16,14 @@ public class ServiceFactory {
 
         return retrofit.create(APIService.class);
     }
+
+    public static APIService getInstance(String url) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        return retrofit.create(APIService.class);
+    }
+
 }

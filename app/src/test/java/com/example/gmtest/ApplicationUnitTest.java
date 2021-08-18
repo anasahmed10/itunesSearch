@@ -3,12 +3,16 @@ package com.example.gmtest;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import com.example.gmtest.api.APIService;
+import com.example.gmtest.api.ServiceFactory;
 import com.example.gmtest.model.Track;
 import com.example.gmtest.model.TrackModel;
 
 import org.junit.Test;
 
-// Tests implemented using Mockito
+import retrofit2.Call;
+
+// Tests implemented using JUnit
 public class ApplicationUnitTest {
     @Test
     public void isEmptyTracks() {
@@ -28,8 +32,19 @@ public class ApplicationUnitTest {
         assertFalse(track.getReleaseDate() == null);
     }
 
-    @Test
-    public void presenterTest() {
 
+    @Test
+    public void urlTest() {
+        String wrongURL = "https://itunes.appl.com/";
+        String sampleSearch = "Kanye";
+
+        try {
+            APIService apiService = ServiceFactory.getInstance(wrongURL);
+            Call<TrackModel> trackModelCall = apiService.getTracks(sampleSearch);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            assertTrue(true);
+        }
     }
 }
