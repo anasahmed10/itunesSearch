@@ -2,6 +2,7 @@ package com.example.gmtest;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +18,6 @@ import com.example.gmtest.model.Track;
 import com.example.gmtest.presenter.TrackAdapter;
 import com.example.gmtest.presenter.TrackModelContract;
 import com.example.gmtest.presenter.TrackModelPresenter;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements TrackAdapter.Call
     @Override
     public void displayMessage(String message) {
         setLoadingIndicator(false);
-        Snackbar.make(layout, message, Snackbar.LENGTH_LONG).show();
     }
 
     @Override
@@ -116,8 +115,9 @@ public class MainActivity extends AppCompatActivity implements TrackAdapter.Call
 
         setLoadingIndicator(true);
         // Special Case: If the string is blank the program will return an error from  gathering too much data
-        if(searchTerm == "") {
-            Toast.makeText(getApplicationContext(), "String is blank: Please enter an artist name", Toast.LENGTH_LONG);
+        if(searchTerm.equals("")) {
+            Log.d("Print", "Print Toast Message");
+            Toast.makeText(this, "String is blank: Please enter an artist name", Toast.LENGTH_LONG).show();
         }
 
         final Runnable runnable = new Runnable() {
