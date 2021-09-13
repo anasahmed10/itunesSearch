@@ -18,4 +18,8 @@ public class TrackModelContract {
     interface Presenter {
         void getTracks(String term);
     }
+
+    interface ViewModel {
+        void getTracks(String term);
+    }
 }

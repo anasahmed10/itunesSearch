@@ -20,7 +20,7 @@ public class Track {
 
     @SerializedName("releaseDate")
     @Expose
-    private final String releaseDate;
+    private String releaseDate;
 
     @SerializedName("primaryGenreName")
     @Expose
@@ -48,7 +48,7 @@ public class Track {
 
     public void setTrackPrice(String trackPriceInput) {trackName = trackPriceInput;}
 
-    public void setReleaseDate(String releaseDateInput) {trackName = releaseDateInput;}
+    public void setReleaseDate(String releaseDateInput) {releaseDate = releaseDateInput;}
 
     public void setPrimaryGenreName(String primaryGenreNameInput) {trackName = primaryGenreNameInput;}
 
